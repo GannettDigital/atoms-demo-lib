@@ -1,0 +1,20 @@
+.button {
+	@include flex-inline();
+	@include display-4();
+	cursor: pointer;
+	outline: none;
+	-webkit-highlight: none;
+}
+.button a {
+	@include flex();
+	color: $color-white;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 1.15;
+	padding: 12px 15px 13px 15px;
+	text-decoration: none;
+}
+.button:hover a {
+	background-color: rgba(0, 0, 0, .15);
+}

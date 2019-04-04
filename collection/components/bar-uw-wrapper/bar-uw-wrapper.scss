@@ -1,0 +1,25 @@
+:host {
+	@include flex();
+	width: 100%;
+	z-index: 501;
+}
+.container {
+	@include display-5();
+	@include row();
+	@include between();
+	@include middle();
+	width: 100%;
+	height: 65px;
+	padding: 0 15px;
+	background-color: #404040;
+	color: $color-white;
+}
+.left {
+	@include middle();
+}
+
+slot[name="tag"],
+slot[name="tag"] {
+	display: flex;
+	width: 100%;
+}

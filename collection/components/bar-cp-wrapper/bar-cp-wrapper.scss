@@ -1,0 +1,58 @@
+.container {
+    @include row();
+    background-color: #404040;
+    position: relative;
+    width: 400px;
+}
+
+.top {
+    @include top();
+    padding-left: 25px;
+}
+
+.right {
+    @include end();
+    cursor: pointer;
+    height: 62px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65px;
+}
+
+.right:before {
+    background-color: rgb(255, 255, 255);
+    content: "";
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 19px;
+    width: 2px;
+}
+
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    position: absolute;
+    right: 25px;
+    top: 23px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.collapsed .arrow {
+    top: 28px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+slot[name="remainingViews"] {
+    color: $color-white;
+    font: 14px/62px 'Unify Sans';
+    margin-left: 25px;
+}
+
+slot[name="remainingViewsNumber"] {
+    font-weight: 900;
+}

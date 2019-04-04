@@ -1,0 +1,1 @@
+export * from '../esm/es2017/gannett-atoms-components.define.js';

@@ -1,0 +1,83 @@
+{
+  "tags": [
+    {
+      "label": "gannett-atoms-component-demo-entry",
+      "description": "gannett-atoms-component-demo-entry is used as a wrapper for individual demo entries.\nThe actual element demo should be slotted into this component.",
+      "attributes": [
+        {
+          "label": "description",
+          "description": "Description for the current demo entry",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-demo-head",
+      "description": "gannett-atoms-component-demo-head is an internal component used to populate the <head> of the\ndemo.html & index.html, mainly to add styling to the overall page.",
+      "attributes": [
+        {
+          "label": "text",
+          "description": "Passes an attribute to the component and sets a default value if not present",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-demo-links",
+      "description": "gannett-atoms-component-demo-links builds demo links for the index page.",
+      "attributes": []
+    },
+    {
+      "label": "gannett-atoms-component-demo-wrapper",
+      "description": "gannett-atoms-component-demo-wrapper is a body wrapper for the demo page.",
+      "attributes": [
+        {
+          "label": "comp-name",
+          "description": "The demo name for the component header.",
+          "required": false
+        },
+        {
+          "label": "is-index",
+          "description": "Flag for the index page to disable sub header.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-ui-button",
+      "description": "TODO: gannett-atoms-component-bar-uw-wrapper description here",
+      "attributes": [
+        {
+          "label": "bg-color",
+          "description": "Background color for the button.",
+          "required": false
+        },
+        {
+          "label": "target",
+          "description": "Target for opening the URL.",
+          "required": false
+        },
+        {
+          "label": "text-color",
+          "description": "Text color for the button.",
+          "required": false
+        },
+        {
+          "label": "url",
+          "description": "The button href value",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-bar-cp-wrapper",
+      "description": "gannett-atoms-component-bar-cp-wrapper is a component that does so-and-so",
+      "attributes": []
+    },
+    {
+      "label": "gannett-atoms-component-bar-uw-wrapper",
+      "description": "TODO: gannett-atoms-component-bar-uw-wrapper description here",
+      "attributes": []
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "components": [
+    {
+      "tag": "gannett-atoms-component-bar-cp-wrapper",
+      "dependencies": [],
+      "componentClass": "BarCpWrapper",
+      "componentPath": "components/bar-cp-wrapper/bar-cp-wrapper.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/bar-cp-wrapper/bar-cp-wrapper.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-bar-uw-wrapper",
+      "dependencies": [],
+      "componentClass": "BarUwWrapper",
+      "componentPath": "components/bar-uw-wrapper/bar-uw-wrapper.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/bar-uw-wrapper/bar-uw-wrapper.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-demo-entry",
+      "dependencies": [],
+      "componentClass": "DemoEntry",
+      "componentPath": "components/_demo/demo-entry/demo-entry.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_demo/demo-entry/demo-entry.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "description",
+          "type": "String",
+          "attr": "description"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-demo-head",
+      "dependencies": [],
+      "componentClass": "DemoHead",
+      "componentPath": "components/_demo/demo-head/demo-head.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_demo/demo-head/demo-head.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "text",
+          "type": "String",
+          "attr": "text"
+        }
+      ]
+    },
+    {
+      "tag": "gannett-atoms-component-demo-links",
+      "dependencies": [
+        "gannett-atoms-component-ui-button"
+      ],
+      "componentClass": "DemoLinks",
+      "componentPath": "components/_demo/demo-links/demo-links.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_demo/demo-links/demo-links.scss"
+          ]
+        }
+      },
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-demo-wrapper",
+      "dependencies": [],
+      "componentClass": "DemoWrapper",
+      "componentPath": "components/_demo/demo-wrapper/demo-wrapper.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_demo/demo-wrapper/demo-wrapper.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "compName",
+          "type": "String",
+          "attr": "comp-name"
+        },
+        {
+          "name": "isIndex",
+          "type": "Boolean",
+          "attr": "is-index"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-ui-button",
+      "dependencies": [],
+      "componentClass": "UiButton",
+      "componentPath": "components/_ui/ui-button/ui-button.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_ui/ui-button/ui-button.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "bgColor",
+          "type": "String",
+          "attr": "bg-color"
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "attr": "target"
+        },
+        {
+          "name": "textColor",
+          "type": "String",
+          "attr": "text-color"
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "attr": "url"
+        }
+      ],
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.16.2",
+    "typescriptVersion": "3.2.2"
+  },
+  "bundles": []
+}

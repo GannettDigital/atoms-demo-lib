@@ -1,0 +1,25 @@
+:host {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.wrapper {
+	max-width: 1000px;
+	width: 100%;
+	padding: 30px;
+}
+.name {
+	color: $color-blue;
+}
+h3 {
+	margin: 0;
+	padding-bottom: 10px;
+
+}
+.sub {
+	@include display-7();
+	color: $color-boulder;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $color-alto;
+}
