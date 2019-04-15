@@ -7,10 +7,14 @@ export class AmpRoadblock {
          * Passes an attribute to the component and sets a default value if not present
          */
         this.text = 'default text';
+        this.threshold = 5;
     }
     render() {
         return (h("div", { class: "roadblock-container", "amp-access": "NOT gup.hasAssetAccess" },
-            h("p", { class: "roadblock-message", "amp-access-template": "" }, "You've reached your limit of 10 free articles."),
+            h("p", { class: "roadblock-message", "amp-access-template": "" },
+                "You've reached your limit of ",
+                this.threshold,
+                " free articles."),
             h("p", { class: "sign-in-cta", "amp-access": "NOT gup.loggedIn" },
                 "Already a subscriber? ",
                 h("a", { class: "login-link" }, "Sign In"),
@@ -54,6 +58,10 @@ export class AmpRoadblock {
         "text": {
             "type": String,
             "attr": "text"
+        },
+        "threshold": {
+            "type": Number,
+            "attr": "threshold"
         }
     }; }
     static get style() { return "/**style-placeholder:gannett-atoms-component-amp-roadblock:**/"; }
