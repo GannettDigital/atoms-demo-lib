@@ -1,3 +1,6 @@
+/**
+ * gannett-atoms-component-bar-cp-wrapper is a component that does so-and-so
+ */
 export class BarCpWrapper {
     render() {
         return (h("div", { class: "container collapsed" },

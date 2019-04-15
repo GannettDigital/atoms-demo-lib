@@ -70,14 +70,192 @@
       ]
     },
     {
+      "label": "gannett-atoms-component-ui-icon",
+      "description": "gannett-atoms-component-ui-icon is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "clickable",
+          "description": "If true, uses a pointer when hovering and emits the \"icon-clicked\" event.\nTo detect the event in a parent component:",
+          "required": false
+        },
+        {
+          "label": "icon",
+          "description": "The icon name to be used",
+          "required": false
+        },
+        {
+          "label": "size",
+          "description": "The size (height & width) of the icon.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-ui-input",
+      "description": "gannett-atoms-component-ui-input-text is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "error-message",
+          "description": "The error message to be displayed if input is invalid.",
+          "required": false
+        },
+        {
+          "label": "focused",
+          "description": "Handles whether or not the input element is focused.",
+          "required": false
+        },
+        {
+          "label": "input-value",
+          "description": "Value of the input",
+          "required": false
+        },
+        {
+          "label": "invalid",
+          "description": "Manual flag to set invalid state, used for styling.\nShould occur by consuming component if submission is attempted while input is empty.",
+          "required": false
+        },
+        {
+          "label": "label",
+          "description": "The placeholder label.",
+          "required": false
+        },
+        {
+          "label": "name",
+          "description": "The name attribute of the input element.",
+          "required": false
+        },
+        {
+          "label": "progress",
+          "description": "Manual flag to set progress bar state, used for styling.\nShould occur by consuming component on submit & removed after submission has completed.",
+          "required": false
+        },
+        {
+          "label": "type",
+          "description": "The type of input. \"text\" & \"email\" are valid types.",
+          "required": false
+        },
+        {
+          "label": "valid",
+          "description": "Determines if the form input, regardless of current input styling, is valid.\nUsed by consuming components on form submission.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-ui-modal",
+      "description": "gannett-atoms-component-ui-modal is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "text",
+          "description": "Passes an attribute to the component and sets a default value if not present",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-amp-roadblock",
+      "description": "gannett-atoms-component-amp-roadblock is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "text",
+          "description": "Passes an attribute to the component and sets a default value if not present",
+          "required": false
+        }
+      ]
+    },
+    {
       "label": "gannett-atoms-component-bar-cp-wrapper",
       "description": "gannett-atoms-component-bar-cp-wrapper is a component that does so-and-so",
       "attributes": []
     },
     {
+      "label": "gannett-atoms-component-bar-uw-free",
+      "description": "gannett-atoms-component-bar-uw-free is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "expression",
+          "description": "campaign expression",
+          "required": false
+        },
+        {
+          "label": "link-subscribe",
+          "description": "subscribe link",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-bar-uw-meter",
+      "description": "gannett-atoms-component-bar-uw-meter is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "expression",
+          "description": "campaign expression",
+          "required": false
+        },
+        {
+          "label": "link-subscribe",
+          "description": "subscribe link",
+          "required": false
+        },
+        {
+          "label": "view-count",
+          "description": "current user view count",
+          "required": false
+        },
+        {
+          "label": "view-remaining",
+          "description": "current user views remaining",
+          "required": false
+        },
+        {
+          "label": "view-threshold",
+          "description": "current user view threshold",
+          "required": false
+        }
+      ]
+    },
+    {
+      "label": "gannett-atoms-component-bar-uw-register",
+      "description": "gannett-atoms-component-bar-uw-register is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "link-register",
+          "description": "subscribe link",
+          "required": false
+        }
+      ]
+    },
+    {
       "label": "gannett-atoms-component-bar-uw-wrapper",
       "description": "TODO: gannett-atoms-component-bar-uw-wrapper description here",
       "attributes": []
+    },
+    {
+      "label": "gannett-atoms-component-newsletter",
+      "description": "gannett-atoms-component-newsletter is a component that does so-and-so",
+      "attributes": [
+        {
+          "label": "section",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "subsection",
+          "description": "",
+          "required": false
+        },
+        {
+          "label": "text",
+          "description": "Passes an attribute to the component and sets a default value if not present",
+          "required": false
+        },
+        {
+          "label": "topic",
+          "description": "",
+          "required": false
+        }
+      ]
     }
   ]
 }

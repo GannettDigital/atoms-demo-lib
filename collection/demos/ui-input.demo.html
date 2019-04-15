@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+	<script src="/build/gannett-atoms-components.js"></script>
+	<gannett-atoms-component-demo-head></gannett-atoms-component-demo-head>
+</head>
+<body>
+	<gannett-atoms-component-demo-wrapper comp-name="gannett-atoms-component-ui-input">
+		<!-- demo entries go here -->
+
+		<gannett-atoms-component-demo-entry description="default component">
+			<gannett-atoms-component-ui-input></gannett-atoms-component-ui-input>
+		</gannett-atoms-component-demo-entry>
+
+		<gannett-atoms-component-demo-entry description="email input with suffix icon">
+			<gannett-atoms-component-ui-input type="email" name="email" label="Your email" error-message="Invalid email address">
+				<gannett-atoms-component-ui-icon slot="suffix" clickable></gannett-atoms-component-ui-icon>
+			</gannett-atoms-component-ui-input>
+		</gannett-atoms-component-demo-entry>
+
+		<gannett-atoms-component-demo-entry description="input pre-populated">
+			<gannett-atoms-component-ui-input input-value="input value">
+				<gannett-atoms-component-ui-icon slot="suffix" clickable></gannett-atoms-component-ui-icon>
+			</gannett-atoms-component-ui-input>
+		</gannett-atoms-component-demo-entry>
+
+		<gannett-atoms-component-demo-entry description="input with 'progress' attribute">
+			<gannett-atoms-component-ui-input progress>
+				<gannett-atoms-component-ui-icon slot="suffix" clickable></gannett-atoms-component-ui-icon>
+			</gannett-atoms-component-ui-input>
+		</gannett-atoms-component-demo-entry>
+
+		<gannett-atoms-component-demo-entry description="input with 'invalid' attribute">
+			<gannett-atoms-component-ui-input invalid>
+				<gannett-atoms-component-ui-icon slot="suffix" clickable></gannett-atoms-component-ui-icon>
+			</gannett-atoms-component-ui-input>
+		</gannett-atoms-component-demo-entry>
+
+		<gannett-atoms-component-demo-entry description="email input with 'invalid' attribute & populated text">
+			<gannett-atoms-component-ui-input invalid input-value="input value" type="email">
+				<gannett-atoms-component-ui-icon slot="suffix" clickable></gannett-atoms-component-ui-icon>
+			</gannett-atoms-component-ui-input>
+		</gannett-atoms-component-demo-entry>
+
+		<!--- end demo entries --->
+	</gannett-atoms-component-demo-wrapper>
+</body>
+</html>

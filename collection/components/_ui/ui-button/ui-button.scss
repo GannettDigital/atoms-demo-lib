@@ -1,14 +1,16 @@
+:host {
+	display: inline-block;
+}
 .button {
-	@include flex-inline();
-	@include display-4();
 	cursor: pointer;
 	outline: none;
 	-webkit-highlight: none;
 }
 .button a {
 	@include flex();
+	@include display-4();
 	color: $color-white;
-	font-size: 14px;
+	font-size: 14px !important;
 	font-weight: 600;
 	font-style: normal;
 	line-height: 1.15;

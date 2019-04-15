@@ -1,6 +1,15 @@
+/**
+ * gannett-atoms-component-demo-wrapper is a body wrapper for the demo page.
+ */
 export class DemoWrapper {
     constructor() {
+        /**
+         * The demo name for the component header.
+         */
         this.compName = 'index';
+        /**
+         * Flag for the index page to disable sub header.
+         */
         this.isIndex = false;
     }
     render() {

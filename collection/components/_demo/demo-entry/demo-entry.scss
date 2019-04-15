@@ -6,3 +6,6 @@
 	margin-bottom: 5px;
 	color: $color-boulder;
 }
+:host > div {
+	@include display-6();
+}

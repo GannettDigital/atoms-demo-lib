@@ -12,6 +12,7 @@
 	color: $color-blue;
 }
 h3 {
+	@include display-1();
 	margin: 0;
 	padding-bottom: 10px;
 

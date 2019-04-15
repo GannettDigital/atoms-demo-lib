@@ -1,5 +1,12 @@
+/**
+ * gannett-atoms-component-demo-entry is used as a wrapper for individual demo entries.
+ * The actual element demo should be slotted into this component.
+ */
 export class DemoEntry {
     constructor() {
+        /**
+         * Description for the current demo entry
+         */
         this.description = 'demo description goes here';
     }
     render() {

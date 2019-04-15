@@ -1,0 +1,170 @@
+.container {
+	position: relative;
+	margin-top: 15px;
+	box-sizing: border-box;
+}
+
+.errorMessage {
+	@include display-7();
+	font-size: 12px !important;
+	color: $color-red;
+	margin-top: 4px;
+	display: none;
+}
+
+label {
+	@include display-6();
+	font-size: 16px !important;
+	color: $color-dove-gray;
+	position: absolute;
+	pointer-events: none;
+	top: 4px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+#bar {
+	position: relative;
+	height: 5px;
+	overflow-x: hidden;
+	margin-top: -2px;
+
+	.highlight,
+	.progress-primary,
+	.progress-secondary {
+		position: absolute;
+		height: 2px;
+		width: 0;
+		background: $color-blue;
+	}
+}
+
+[slot="suffix"] {
+	display: flex;
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid $color-mine-shaft;
+
+	input {
+		@include display-6();
+		font-size: 16px !important;
+		display: flex;
+		width: 100%;
+		border: none;
+		padding: 4px 0;
+		outline: none;
+	}
+
+	/* style changes based on props/input classes */
+
+	// move the label when focused or populated
+	&.focused label,
+	&.populated label {
+		@include display-7();
+		font-size: 12px !important;
+		top: -1px;
+		-webkit-transform: translateY(-100%) scale(1)!important;
+		transform: translateY(-100%) scale(1)!important;
+	}
+
+	// default highlight animation when focused
+	&.focused {
+		~ #bar .highlight {
+			-webkit-animation: focus 0.2s linear;
+			-moz-animation: focus 0.2s linear;
+			animation: focus 0.2s linear;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	// show the progress bar when "progress" prop exists & "invalid" prop does not
+	&.progress:not(.invalid) {
+		~ #bar {
+			.progress-primary {
+				-webkit-animation: progressPrimary 2s infinite;
+				-moz-animation: progressPrimary 2s infinite;
+				animation: progressPrimary 2s infinite;
+				animation-fill-mode: forwards;
+			}
+			.progress-secondary {
+				-webkit-animation: progressSecondary 2s 0.5s infinite;
+				-moz-animation: progressSecondary 2s 0.5s infinite;
+				animation: progressSecondary 2s 0.5s infinite;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+
+	// override the highlight color & animation if invalid
+	&.invalid {
+		color: $color-red;
+
+		input {
+			color: $color-red;
+		}
+
+		~ #bar .highlight {
+			width: 100%;
+			background-color: $color-red;
+			animation: none;
+		}
+
+		~ .errorMessage,
+		label {
+			color: $color-red !important;
+		}
+
+		~ .errorMessage {
+			display: block;
+		}
+	}
+}
+
+/* animations */
+@-webkit-keyframes focus {
+	from { width: 0; left: 50%; }
+	to   { width: 100%; left: 0; }
+}
+
+@-moz-keyframes focus {
+	from { width: 0; left: 50%; }
+	to   { width: 100%; left: 0; }
+}
+
+@keyframes focus {
+	from { width: 0; left: 50%; }
+	to   { width: 100%; left: 0; }
+}
+
+@-webkit-keyframes progressPrimary {
+	from { left: -5%; width: 5%; }
+	to { left: 130%; width: 100%;}
+}
+
+@-moz-keyframes progressPrimary {
+	from { left: -5%; width: 5%; }
+	to { left: 130%; width: 100%;}
+}
+@keyframes progressPrimary {
+	from { left: -5%; width: 5%; }
+	to { left: 130%; width: 100%;}
+}
+
+@-webkit-keyframes progressSecondary {
+	from { left: -80%; width: 80%; }
+	to { left: 110%; width: 10%;}
+}
+
+@-moz-keyframes progressSecondary {
+	from { left: -80%; width: 80%; }
+	to { left: 110%; width: 10%;}
+}
+@keyframes progressSecondary {
+	from { left: -80%; width: 80%; }
+	to { left: 110%; width: 10%;}
+}

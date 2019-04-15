@@ -1,8 +1,23 @@
+/**
+ * TODO: gannett-atoms-component-bar-uw-wrapper description here
+ */
 export class UiButton {
     constructor() {
+        /**
+         * The button href value
+         */
         this.url = '#';
+        /**
+         * Target for opening the URL.
+         */
         this.target = '_top';
+        /**
+         * Text color for the button.
+         */
         this.textColor = '#ffffff';
+        /**
+         * Background color for the button.
+         */
         this.bgColor = '#009bff';
     }
     render() {

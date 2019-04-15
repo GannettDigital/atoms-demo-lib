@@ -1,3 +1,15 @@
 gannett-atoms-component-ui-button {
-	margin: 0px 10px 10px 0;
+	margin: 0 7px 7px 0;
+}
+.group {
+	margin-bottom: 10px;
+}
+
+.title {
+	@include display-6();
+	font-weight: $font-weight-bold;
+	color: $color-dove-gray;
+	margin-bottom: 3px;
+	text-decoration: underline;
+	text-decoration-color: #cecece;
 }

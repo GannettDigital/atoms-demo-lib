@@ -1,6 +1,27 @@
 {
   "components": [
     {
+      "tag": "gannett-atoms-component-amp-roadblock",
+      "dependencies": [],
+      "componentClass": "AmpRoadblock",
+      "componentPath": "components/amp-roadblock/amp-roadblock.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/amp-roadblock/amp-roadblock.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "text",
+          "type": "String",
+          "attr": "text"
+        }
+      ],
+      "shadow": true
+    },
+    {
       "tag": "gannett-atoms-component-bar-cp-wrapper",
       "dependencies": [],
       "componentClass": "BarCpWrapper",
@@ -12,6 +33,108 @@
           ]
         }
       },
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-bar-uw-free",
+      "dependencies": [
+        "gannett-atoms-component-bar-uw-wrapper",
+        "gannett-atoms-component-ui-button"
+      ],
+      "componentClass": "BarUwFree",
+      "componentPath": "components/bar-uw-free/bar-uw-free.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/bar-uw-free/bar-uw-free.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "expression",
+          "type": "String",
+          "attr": "expression"
+        },
+        {
+          "name": "linkSubscribe",
+          "type": "String",
+          "attr": "link-subscribe"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-bar-uw-meter",
+      "dependencies": [
+        "gannett-atoms-component-bar-uw-wrapper",
+        "gannett-atoms-component-ui-button"
+      ],
+      "componentClass": "BarUwMeter",
+      "componentPath": "components/bar-uw-meter/bar-uw-meter.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/bar-uw-meter/bar-uw-meter.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "expression",
+          "type": "String",
+          "attr": "expression"
+        },
+        {
+          "name": "linkSubscribe",
+          "type": "String",
+          "attr": "link-subscribe"
+        },
+        {
+          "name": "viewCount",
+          "type": "Number",
+          "attr": "view-count"
+        },
+        {
+          "name": "viewRemaining",
+          "type": "Number",
+          "attr": "view-remaining"
+        },
+        {
+          "name": "viewThreshold",
+          "type": "Number",
+          "attr": "view-threshold"
+        }
+      ],
+      "methods": [
+        {
+          "name": "_getTag"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-bar-uw-register",
+      "dependencies": [
+        "gannett-atoms-component-bar-uw-wrapper",
+        "gannett-atoms-component-ui-button"
+      ],
+      "componentClass": "BarUwRegister",
+      "componentPath": "components/bar-uw-register/bar-uw-register.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/bar-uw-register/bar-uw-register.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "linkRegister",
+          "type": "String",
+          "attr": "link-register"
+        }
+      ],
       "shadow": true
     },
     {
@@ -112,6 +235,50 @@
       "shadow": true
     },
     {
+      "tag": "gannett-atoms-component-newsletter",
+      "dependencies": [],
+      "componentClass": "Newsletter",
+      "componentPath": "components/newsletter/newsletter.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/newsletter/newsletter.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "section",
+          "type": "String",
+          "attr": "section"
+        },
+        {
+          "name": "subsection",
+          "type": "String",
+          "attr": "subsection"
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "attr": "text"
+        },
+        {
+          "name": "topic",
+          "type": "String",
+          "attr": "topic"
+        }
+      ],
+      "states": [
+        {
+          "name": "name"
+        },
+        {
+          "name": "shortDescription"
+        }
+      ],
+      "shadow": true
+    },
+    {
       "tag": "gannett-atoms-component-ui-button",
       "dependencies": [],
       "componentClass": "UiButton",
@@ -143,6 +310,142 @@
           "name": "url",
           "type": "String",
           "attr": "url"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-ui-icon",
+      "dependencies": [],
+      "componentClass": "UiIcon",
+      "componentPath": "components/_ui/ui-icon/ui-icon.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_ui/ui-icon/ui-icon.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "clickable",
+          "type": "Boolean",
+          "attr": "clickable"
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "attr": "icon"
+        },
+        {
+          "name": "size",
+          "type": "Number",
+          "attr": "size"
+        }
+      ],
+      "events": [
+        {
+          "event": "icon-clicked",
+          "method": "_iconClicked"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-ui-input",
+      "dependencies": [],
+      "componentClass": "UiInput",
+      "componentPath": "components/_ui/ui-input/ui-input.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_ui/ui-input/ui-input.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "errorMessage",
+          "type": "String",
+          "attr": "error-message"
+        },
+        {
+          "name": "focused",
+          "type": "Boolean",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "focused"
+        },
+        {
+          "name": "inputValue",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "input-value"
+        },
+        {
+          "name": "invalid",
+          "type": "Boolean",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "invalid"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "progress",
+          "type": "Boolean",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "progress"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "type"
+        },
+        {
+          "name": "valid",
+          "type": "Boolean",
+          "mutable": true,
+          "reflectToAttr": true,
+          "attr": "valid"
+        }
+      ],
+      "states": [
+        {
+          "name": "populated"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "gannett-atoms-component-ui-modal",
+      "dependencies": [],
+      "componentClass": "UiModal",
+      "componentPath": "components/_ui/ui-modal/ui-modal.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/_ui/ui-modal/ui-modal.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "text",
+          "type": "String",
+          "attr": "text"
         }
       ],
       "shadow": true
