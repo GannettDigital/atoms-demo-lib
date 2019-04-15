@@ -160,6 +160,11 @@
           "label": "text",
           "description": "Passes an attribute to the component and sets a default value if not present",
           "required": false
+        },
+        {
+          "label": "threshold",
+          "description": "",
+          "required": false
         }
       ]
     },

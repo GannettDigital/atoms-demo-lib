@@ -7,5 +7,6 @@ export declare class AmpRoadblock {
      * Passes an attribute to the component and sets a default value if not present
      */
     text: string;
+    threshold: number;
     render(): JSX.Element;
 }

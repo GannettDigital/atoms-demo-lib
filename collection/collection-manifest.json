@@ -17,6 +17,11 @@
           "name": "text",
           "type": "String",
           "attr": "text"
+        },
+        {
+          "name": "threshold",
+          "type": "Number",
+          "attr": "threshold"
         }
       ],
       "shadow": true

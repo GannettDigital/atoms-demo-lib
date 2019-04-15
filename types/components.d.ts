@@ -227,12 +227,14 @@ export namespace Components {
     * Passes an attribute to the component and sets a default value if not present
     */
     'text': string;
+    'threshold': number;
   }
   interface GannettAtomsComponentAmpRoadblockAttributes extends StencilHTMLAttributes {
     /**
     * Passes an attribute to the component and sets a default value if not present
     */
     'text'?: string;
+    'threshold'?: number;
   }
 
   interface GannettAtomsComponentBarCpWrapper {}
