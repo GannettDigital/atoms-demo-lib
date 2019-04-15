@@ -5,7 +5,28 @@
     <title>Title</title>
 	<script src="https://cdn.jsdelivr.net/gh/GannettDigital/atoms-demo-lib/gannett-atoms-components.js"></script>
 </head>
+
 <body>
-<gannett-atoms-component-amp-roadblock threshold="10"></gannett-atoms-component-amp-roadblock>
 </body>
+
+<script type="application/javascript">
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    function createAtomsComponent(threshold){
+        //debugger;
+        var element = document.createElement("gannett-atoms-component-amp-roadblock");
+        element.setAttribute("threshold", threshold);
+        document.querySelector('body').appendChild(element);
+
+    }
+
+    window.onload=createAtomsComponent(getUrlVars()['threshold']);
+
+</script>
 </html>
