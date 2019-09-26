@@ -5,9 +5,7 @@ let article = document.getElementsByTagName('body')[0],
     container = document.getElementById('upnextContainer'),
     shown = false,
     launchScrollPercentage = 50;
-if (document.referrer.indexOf('google.com') > -1 || document.referrer.indexOf('bing.com') > -1 || document.referrer.indexOf('yahoo.com') > -1 || document.referrer.indexOf('facebook') > -1 || document.referrer.indexOf('twitter') > -1 ) {
-    launchScrollPercentage = 25;
-}
+
 window.onscroll = function() {checkToShowBanner()};
 function checkToShowBanner() {
     if(!shown && (window.scrollY > (article.offsetHeight * (launchScrollPercentage/100)))) {
