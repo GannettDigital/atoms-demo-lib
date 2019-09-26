@@ -1,23 +1,9 @@
 
 console.log(" UPNEXT SCRIPT running");
-let article = document.getElementsByTagName('body')[0],
-    wrapper = document.getElementById('upNextWrapper'),
-    container = document.getElementById('upnextContainer'),
-    shown = false,
-    launchScrollPercentage = 50;
+const wrapper = document.getElementById('upNextWrapper');
+const container = document.getElementById('upnextContainer');
 
-window.onscroll = function() {checkToShowBanner()};
-function checkToShowBanner() {
-    console.log(" UPNEXT SCRIPT running");
-    if(!shown && (window.scrollY > (article.offsetHeight * (launchScrollPercentage/100)))) {
-        shown = true;
-        showBanner();
-    }
-}
-function showBanner() {
-    console.log(" UPNEXT SCRIPT running");
-    wrapper.classList.add('open');
-    setTimeout(function(){
-        container.classList.add('open-banner');
-    }, 250);
-}
+setTimeout(function(){
+  wrapper.classList.add('open');
+  container.classList.add('open-banner');
+}, 600);
